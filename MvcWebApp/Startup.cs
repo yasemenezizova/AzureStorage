@@ -54,7 +54,10 @@ namespace MvcWebApp
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=TableStorage}/{action=Index}/{id?}");
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
