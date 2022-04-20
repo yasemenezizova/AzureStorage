@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6beee6ad-fed3-47d2-ae4f-6cf08c25b6f0": {
+      "ProjectGuid": "6beee6ad-fed3-47d2-ae4f-6cf08c25b6f0",
+      "DisplayName": "AzureStorageLibrary",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "7c344562-4d0c-4c5d-9f42-4367c325d5f1": {
+      "ProjectGuid": "7c344562-4d0c-4c5d-9f42-4367c325d5f1",
+      "DisplayName": "MvcWebApp",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
