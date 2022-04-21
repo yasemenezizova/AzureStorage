@@ -30,5 +30,11 @@ namespace MvcWebApp.Controllers
             await _blogStorage.UploadAsync(picture.OpenReadStream(), newFileName, EContainerName.pictures);
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Download(string fileName)
+        {
+            var stream = await _blogStorage.DownloadAsync(fileName,EContainerName.pictures);
+            return File(stream,"application/octet-stream", fileName);
+
+        }
     }
 }

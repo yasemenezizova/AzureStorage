@@ -26,6 +26,9 @@
         <td>
             @item.Name
         </td>
+        <td>
+            <a class="btn btn-primary" asp-action="Download" asp-route-fileName="@item.Name">Download</a>
+        </td>
     </tr>
 }
 </table>
