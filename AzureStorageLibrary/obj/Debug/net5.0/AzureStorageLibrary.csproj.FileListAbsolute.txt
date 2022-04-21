@@ -10,3 +10,15 @@ C:\Users\yeziz\source\repos\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\Az
 C:\Users\yeziz\source\repos\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.dll
 C:\Users\yeziz\source\repos\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\ref\AzureStorageLibrary.dll
 C:\Users\yeziz\source\repos\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.pdb
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\bin\Debug\net5.0\AzureStorageLibrary.deps.json
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\bin\Debug\net5.0\AzureStorageLibrary.dll
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\bin\Debug\net5.0\AzureStorageLibrary.pdb
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.csproj.AssemblyReference.cache
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.AssemblyInfoInputs.cache
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.AssemblyInfo.cs
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.csproj.CoreCompileInputs.cache
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.dll
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\refint\AzureStorageLibrary.dll
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\AzureStorageLibrary.pdb
+C:\Users\yasemen.a\Desktop\AzureStorage\AzureStorageLibrary\obj\Debug\net5.0\ref\AzureStorageLibrary.dll

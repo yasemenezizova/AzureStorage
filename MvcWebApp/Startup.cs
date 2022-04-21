@@ -27,6 +27,7 @@ namespace MvcWebApp
         {
             ConnectionStrings.AzureStorageConnectionString = Configuration.GetSection("AzureConnectionString")["StorageConStr"];
             services.AddScoped(typeof(INoSqlStorage<>), typeof(TableStorage<>));
+            services.AddSingleton<IBlogStorage,BlobStorage>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

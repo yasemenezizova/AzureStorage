@@ -1,17 +1,33 @@
-﻿@model AzureStorageLibrary.Models.Product
-<h2> Add Product</h2>
-<form  asp-action="Create" method="post" enctype="application/x-www-form-urlencoded">
-    <input  class="form-group mr-1"  asp-for="Name"  placeholder="Product Name" />
-    <input class="form-group  mr-1"  asp-for="Price" placeholder="Product Price" />
-    <input class="form-group  mr-1"  asp-for="Stock" placeholder="Product Stock" />
-    <input class="form-group mr-1"  asp-for="Color" placeholder="Product Color" />
+﻿@using MvcWebApp.Models
+@model AzureStorageLibrary.Models.Product
 
-    <input class="btn btn-primary" type="submit" value="Add Product" />
+<h2 class="mt-5 mb-4">@(ViewBag.Process==ProcessEnum.Update?"Update Product":"Add Product")</h2>
+<form class="form-inline" asp-action="@(ViewBag.Process==ProcessEnum.Update?"Update":"Create")" method="post" enctype="application/x-www-form-urlencoded">
+    <input class="form-control mr-1" asp-for="Name" placeholder="Product Name" />
+    @if (ViewBag.Process==ProcessEnum.Get)
+    {
+        <input class="form-control  mr-1"  placeholder="Product Price" />
+    }
+    else
+    {
+        <input class="form-control  mr-1" asp-for="Price" placeholder="Product Price">
+    }
+    <input class="form-control mr-1" asp-for="Stock" placeholder="Product Stock" />
+    <input class="form-control mr-1" asp-for="Color" placeholder="Product Color" />
+    <input type="hidden" asp-for="RowKey" />
+    <input type="hidden" asp-for="PartitionKey" />
+    <input type="hidden" asp-for="ETag" />
+    <input class="btn btn-primary" type="submit" value="@(ViewBag.Process==ProcessEnum.Update?"Update Product":"Add Product")" />
 </form>
 
 
 
-<h2>Products</h2>
+<h2 class="mt-5 mb-4">Products</h2>
+<form class="form-inline mb-3" asp-action="Query"  method="get">
+   
+    <input class="form-control mr-2" type="number" name="price" placeholder="Price Filter" />
+    <input type="submit" class="btn btn-success" name="query" />
+</form>
 <table class="table table-bordered">
     <tr>
         <th>RowKey</th>
@@ -21,7 +37,7 @@
         <th>Stock</th>
         <th>Color</th>
         <th>TimeStamp</th>
-
+        <th>Actions</th>
     </tr>
     @foreach (var item in ViewBag.products as List<AzureStorageLibrary.Models.Product>)
     {
@@ -33,6 +49,10 @@
             <td>@item.Stock</td>
             <td>@item.Color</td>
             <td>@item.Timestamp</td>
+            <td>
+                <a class="btn btn-primary btn-sm" asp-action="Update" asp-controller="TableStorage" asp-route-partitionKey=@item.PartitionKey asp-route-rowKey=@item.RowKey><span class="fas fa-edit"></span></a>
+                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-controller="TableStorage" asp-route-partitionKey=@item.PartitionKey asp-route-rowKey=@item.RowKey><span class="fas fa-minus-circle"></span></a>
+            </td>
         </tr>
     }
 </table>

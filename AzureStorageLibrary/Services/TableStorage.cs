@@ -12,6 +12,7 @@ namespace AzureStorageLibrary.Services
     {
         private readonly CloudTableClient _cloudTableClient;
         private readonly CloudTable _table;
+
         public TableStorage()
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConnectionStrings.AzureStorageConnectionString);
@@ -41,7 +42,7 @@ namespace AzureStorageLibrary.Services
 
         public async Task<TEntity> Get(string rowKey, string partitionKey)
         {
-            var operation = TableOperation.Retrieve(partitionKey, rowKey);
+            var operation = TableOperation.Retrieve<TEntity>(partitionKey, rowKey);
             var execute= await _table.ExecuteAsync(operation);
             return execute.Result as TEntity;
         }

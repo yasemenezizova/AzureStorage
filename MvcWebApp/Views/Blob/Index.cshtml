@@ -1,0 +1,31 @@
+﻿@using MvcWebApp.Models
+@{
+    ViewData["Titlr"] = "Index";
+}
+
+<h2>Save Picture</h2>
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="picture"/>
+    <button class="btn btn-primary" type="submit">Save</button>
+</form>
+<h2>Blobs</h2>
+<table class="table table-border">
+    <tr>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Action</th>
+
+    </tr>
+
+@foreach (var item in ViewBag.Blobs as List<FileBlob>)
+{
+    <tr>
+        <td>
+            <img src="@item.Url" class="img-thumbnail" style="width:50px;">
+        </td>
+        <td>
+            @item.Name
+        </td>
+    </tr>
+}
+</table>
