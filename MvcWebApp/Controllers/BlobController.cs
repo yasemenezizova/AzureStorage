@@ -16,25 +16,37 @@ namespace MvcWebApp.Controllers
         public BlobController(IBlogStorage blogStorage)
         {
             _blogStorage = blogStorage;
+          
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var names = _blogStorage.GetNames(EContainerName.pictures);
             string blobUrl = $"{_blogStorage.BlobUrl}/{EContainerName.pictures.ToString()}";
-            ViewBag.Blobs = names.Select(x => new FileBlob { Name = x, Url = $"{blobUrl}/{x}" }).ToList();
+            ViewBag.blobs = names.Select(x => new FileBlob { Name = x, Url = $"{blobUrl}/{x}" }).ToList();
+
+            ViewBag.logs = await _blogStorage.GetLogAsync("controller.txt");
             return View();
         }
         public async Task<IActionResult> Upload(IFormFile picture)
         {
+            await _blogStorage.SetLogAsync("Upload begin to work", "controller.txt");
+
             var newFileName = Guid.NewGuid().ToString() + Path.GetExtension(picture.FileName);
             await _blogStorage.UploadAsync(picture.OpenReadStream(), newFileName, EContainerName.pictures);
-            return RedirectToAction("Index");
+            await _blogStorage.SetLogAsync("Upload finished","controller.txt");
+            return RedirectToAction("Index", ViewBag.logs);
         }
         public async Task<IActionResult> Download(string fileName)
         {
-            var stream = await _blogStorage.DownloadAsync(fileName,EContainerName.pictures);
-            return File(stream,"application/octet-stream", fileName);
+            var stream = await _blogStorage.DownloadAsync(fileName, EContainerName.pictures);
+            return File(stream, "application/octet-stream", fileName);
 
+        }
+
+        public async Task<IActionResult> Delete(string fileName)
+        {
+            await _blogStorage.DeleteAsync(fileName, EContainerName.pictures);
+            return RedirectToAction("Index");
         }
     }
 }
