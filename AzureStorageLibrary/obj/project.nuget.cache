@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "xZShWpbtLz4p7PFm0hFit6s30xpFxWvWytTiE6o+vNTMiSLjVwgDB/VNbi61QNM3IbhUCFhInQXVL4e+W5mKzg==",
+  "dgSpecHash": "W7xu7vxMXc2GD24NTQRQj+OoK9awkMTmlMSHUgTShCv25YX684XCsLWdZU5Gf6gJNl65jZbnF6OhyZDoeYZfmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\yasemen.a\\Desktop\\AzureStorage\\AzureStorageLibrary\\AzureStorageLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yasemen.a\\.nuget\\packages\\azure.core\\1.22.0\\azure.core.1.22.0.nupkg.sha512",
     "C:\\Users\\yasemen.a\\.nuget\\packages\\azure.storage.blobs\\12.11.0\\azure.storage.blobs.12.11.0.nupkg.sha512",
     "C:\\Users\\yasemen.a\\.nuget\\packages\\azure.storage.common\\12.10.0\\azure.storage.common.12.10.0.nupkg.sha512",
+    "C:\\Users\\yasemen.a\\.nuget\\packages\\azure.storage.queues\\12.9.0\\azure.storage.queues.12.9.0.nupkg.sha512",
     "C:\\Users\\yasemen.a\\.nuget\\packages\\microsoft.azure.cosmos.table\\1.0.8\\microsoft.azure.cosmos.table.1.0.8.nupkg.sha512",
     "C:\\Users\\yasemen.a\\.nuget\\packages\\microsoft.azure.documentdb.core\\2.11.2\\microsoft.azure.documentdb.core.2.11.2.nupkg.sha512",
     "C:\\Users\\yasemen.a\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

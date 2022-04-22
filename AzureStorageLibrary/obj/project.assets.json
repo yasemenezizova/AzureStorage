@@ -46,6 +46,20 @@
           "lib/netstandard2.0/Azure.Storage.Common.dll": {}
         }
       },
+      "Azure.Storage.Queues/12.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Storage.Common": "12.10.0",
+          "System.Memory.Data": "1.0.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Storage.Queues.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Storage.Queues.dll": {}
+        }
+      },
       "Microsoft.Azure.Cosmos.Table/1.0.8": {
         "type": "package",
         "dependencies": {
@@ -2017,6 +2031,22 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Storage.Common.dll",
         "lib/netstandard2.0/Azure.Storage.Common.xml"
+      ]
+    },
+    "Azure.Storage.Queues/12.9.0": {
+      "sha512": "jDiyHtsCUCrWNvZW7SjJnJb46UhpdgQrWCbL8aWpapDHlq9LvbvxYpfLh4dfKAz09QiTznLMIU3i+md9+7GzqQ==",
+      "type": "package",
+      "path": "azure.storage.queues/12.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.storage.queues.12.9.0.nupkg.sha512",
+        "azure.storage.queues.nuspec",
+        "azureicon.png",
+        "lib/netstandard2.0/Azure.Storage.Queues.dll",
+        "lib/netstandard2.0/Azure.Storage.Queues.xml"
       ]
     },
     "Microsoft.Azure.Cosmos.Table/1.0.8": {
@@ -6762,6 +6792,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Azure.Storage.Blobs >= 12.11.0",
+      "Azure.Storage.Queues >= 12.9.0",
       "Microsoft.Azure.Cosmos.Table >= 1.0.8"
     ]
   },
@@ -6807,6 +6838,10 @@
           "Azure.Storage.Blobs": {
             "target": "Package",
             "version": "[12.11.0, )"
+          },
+          "Azure.Storage.Queues": {
+            "target": "Package",
+            "version": "[12.9.0, )"
           },
           "Microsoft.Azure.Cosmos.Table": {
             "target": "Package",

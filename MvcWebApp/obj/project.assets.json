@@ -46,6 +46,20 @@
           "lib/netstandard2.0/Azure.Storage.Common.dll": {}
         }
       },
+      "Azure.Storage.Queues/12.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Storage.Common": "12.10.0",
+          "System.Memory.Data": "1.0.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Storage.Queues.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Storage.Queues.dll": {}
+        }
+      },
       "Humanizer.Core/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2423,6 +2437,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Azure.Storage.Blobs": "12.11.0",
+          "Azure.Storage.Queues": "12.9.0",
           "Microsoft.Azure.Cosmos.Table": "1.0.8"
         },
         "compile": {
@@ -2487,6 +2502,22 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Storage.Common.dll",
         "lib/netstandard2.0/Azure.Storage.Common.xml"
+      ]
+    },
+    "Azure.Storage.Queues/12.9.0": {
+      "sha512": "jDiyHtsCUCrWNvZW7SjJnJb46UhpdgQrWCbL8aWpapDHlq9LvbvxYpfLh4dfKAz09QiTznLMIU3i+md9+7GzqQ==",
+      "type": "package",
+      "path": "azure.storage.queues/12.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.storage.queues.12.9.0.nupkg.sha512",
+        "azure.storage.queues.nuspec",
+        "azureicon.png",
+        "lib/netstandard2.0/Azure.Storage.Queues.dll",
+        "lib/netstandard2.0/Azure.Storage.Queues.xml"
       ]
     },
     "Humanizer.Core/2.2.0": {
@@ -7963,34 +7994,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yeziz\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\yasemen.a\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yeziz\\source\\repos\\AzureStorage\\MvcWebApp\\MvcWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\yasemen.a\\Desktop\\AzureStorage\\MvcWebApp\\MvcWebApp.csproj",
       "projectName": "MvcWebApp",
-      "projectPath": "C:\\Users\\yeziz\\source\\repos\\AzureStorage\\MvcWebApp\\MvcWebApp.csproj",
-      "packagesPath": "C:\\Users\\yeziz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yeziz\\source\\repos\\AzureStorage\\MvcWebApp\\obj\\",
+      "projectPath": "C:\\Users\\yasemen.a\\Desktop\\AzureStorage\\MvcWebApp\\MvcWebApp.csproj",
+      "packagesPath": "C:\\Users\\yasemen.a\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yasemen.a\\Desktop\\AzureStorage\\MvcWebApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\yeziz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\yasemen.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -7998,8 +8020,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\yeziz\\source\\repos\\AzureStorage\\AzureStorageLibrary\\AzureStorageLibrary.csproj": {
-              "projectPath": "C:\\Users\\yeziz\\source\\repos\\AzureStorage\\AzureStorageLibrary\\AzureStorageLibrary.csproj"
+            "C:\\Users\\yasemen.a\\Desktop\\AzureStorage\\AzureStorageLibrary\\AzureStorageLibrary.csproj": {
+              "projectPath": "C:\\Users\\yasemen.a\\Desktop\\AzureStorage\\AzureStorageLibrary\\AzureStorageLibrary.csproj"
             }
           }
         }
@@ -8037,7 +8059,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

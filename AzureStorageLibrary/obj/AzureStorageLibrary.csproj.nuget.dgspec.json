@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[12.11.0, )"
             },
+            "Azure.Storage.Queues": {
+              "target": "Package",
+              "version": "[12.9.0, )"
+            },
             "Microsoft.Azure.Cosmos.Table": {
               "target": "Package",
               "version": "[1.0.8, )"

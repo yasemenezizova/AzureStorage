@@ -262,3 +262,4 @@ C:\Users\yeziz\source\repos\AzureStorage\MvcWebApp\bin\Debug\net5.0\Azure.Storag
 C:\Users\yeziz\source\repos\AzureStorage\MvcWebApp\bin\Debug\net5.0\System.IO.Hashing.dll
 C:\Users\yeziz\source\repos\AzureStorage\MvcWebApp\bin\Debug\net5.0\System.Memory.Data.dll
 C:\Users\yeziz\source\repos\AzureStorage\MvcWebApp\obj\Debug\net5.0\Razor\Views\Blob\Index.cshtml.g.cs
+C:\Users\yasemen.a\Desktop\AzureStorage\MvcWebApp\bin\Debug\net5.0\Azure.Storage.Queues.dll

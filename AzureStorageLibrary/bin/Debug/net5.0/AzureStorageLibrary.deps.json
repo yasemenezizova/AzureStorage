@@ -9,6 +9,7 @@
       "AzureStorageLibrary/1.0.0": {
         "dependencies": {
           "Azure.Storage.Blobs": "12.11.0",
+          "Azure.Storage.Queues": "12.9.0",
           "Microsoft.Azure.Cosmos.Table": "1.0.8"
         },
         "runtime": {
@@ -53,6 +54,19 @@
           "lib/netstandard2.0/Azure.Storage.Common.dll": {
             "assemblyVersion": "12.10.0.0",
             "fileVersion": "12.1000.22.16003"
+          }
+        }
+      },
+      "Azure.Storage.Queues/12.9.0": {
+        "dependencies": {
+          "Azure.Storage.Common": "12.10.0",
+          "System.Memory.Data": "1.0.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Storage.Queues.dll": {
+            "assemblyVersion": "12.9.0.0",
+            "fileVersion": "12.900.22.16003"
           }
         }
       },
@@ -1188,6 +1202,13 @@
       "sha512": "sha512-vYkHGzUkdZTace/cDPZLG+Mh/EoPqQuGxDIBOau9D+XWoDPmuUFGk325aXplkFE4JFGpSwoytNYzk/qBCaiHqg==",
       "path": "azure.storage.common/12.10.0",
       "hashPath": "azure.storage.common.12.10.0.nupkg.sha512"
+    },
+    "Azure.Storage.Queues/12.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jDiyHtsCUCrWNvZW7SjJnJb46UhpdgQrWCbL8aWpapDHlq9LvbvxYpfLh4dfKAz09QiTznLMIU3i+md9+7GzqQ==",
+      "path": "azure.storage.queues/12.9.0",
+      "hashPath": "azure.storage.queues.12.9.0.nupkg.sha512"
     },
     "Microsoft.Azure.Cosmos.Table/1.0.8": {
       "type": "package",
