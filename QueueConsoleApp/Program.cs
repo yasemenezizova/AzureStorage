@@ -16,6 +16,7 @@ namespace QueueConsoleApp
             string base64Message = Convert.ToBase64String(Encoding.UTF8.GetBytes("salam Yasemen Azizova"));
             queue.SendMessageAsync(base64Message).Wait();
             Console.WriteLine("sending process was succesfully");
+            Console.ReadLine();
             #endregion
 
             #region ReadingMessage
