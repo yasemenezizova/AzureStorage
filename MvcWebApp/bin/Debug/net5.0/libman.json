@@ -5,6 +5,10 @@
     {
       "library": "twitter-bootstrap@5.1.3",
       "destination": "wwwroot/lib/twitter-bootstrap/"
+    },
+    {
+      "library": "microsoft-signalr@6.0.4",
+      "destination": "wwwroot/lib/microsoft-signalr/"
     }
   ]
 }

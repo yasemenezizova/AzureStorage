@@ -4,11 +4,18 @@
     ViewData["Title"] = "Index";
 }
 @section Scripts{
+    <script src="~/lib/microsoft-signalr/signalr.min.js"></script>
 <script type="text/javascript">
 
-
-
     $(document).ready(()=>{
+
+        var connection=new signalR.HubConnectionBuilder().withUrl("/NotificationHub").build();
+        connection.start().then(()=>{
+            console.log("hubconId "+connection.connectionId);
+        });
+
+
+
         var pictures=new Array();
         var UserId="@ViewBag.UserId";
         var City="@ViewBag.City";
@@ -17,7 +24,7 @@
             let pictureWatermark={
                 "UserId":UserId,
                 "City":City,
-                "ConnectionId":"123",
+                "ConnectionId":connection.connectionId,
                 "WatermarkText":$("#watermarkText").val(),
                 "Pictures":pictures
             };
@@ -42,9 +49,9 @@
             <input type="file" name="pictures" multiple />
             <input class="btn btn-primary" type="submit" value="Add Picture" />
         </form>
-        <div class="form-inline">
-            <input type="text" id="watermarkText" />
-            <button id="AddWatermark">AddWatermark</button>
+        <div class="form-inline mt-3">
+            <input class="form-control" type="text" id="watermarkText" />
+            <button class="btn btn-success ml-1"  id="AddWatermark">AddWatermark</button>
 
         </div>
         <h2>Pictures</h2>

@@ -20,7 +20,17 @@
       "ProjectGuid": "af2f01ff-b42f-44b7-9b5d-2903377823e7",
       "DisplayName": "QueueConsoleApp",
       "ColorIndex": 2
+    },
+    "79200c02-f577-4e22-8889-93c0083429d4": {
+      "ProjectGuid": "79200c02-f577-4e22-8889-93c0083429d4",
+      "DisplayName": "WatermarkProcessFunction",
+      "ColorIndex": 3
+    },
+    "e4a4aa2b-c46f-48a7-b5a5-8e40150ead76": {
+      "ProjectGuid": "e4a4aa2b-c46f-48a7-b5a5-8e40150ead76",
+      "DisplayName": "WatermarkProcessingFunction",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 5
 }

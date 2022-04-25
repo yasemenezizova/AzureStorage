@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcWebApp", "MvcWebApp\MvcW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueConsoleApp", "QueueConsoleApp\QueueConsoleApp.csproj", "{AF2F01FF-B42F-44B7-9B5D-2903377823E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatermarkProcessingFunction", "WatermarkProcessingFunction\WatermarkProcessingFunction.csproj", "{E4A4AA2B-C46F-48A7-B5A5-8E40150EAD76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AF2F01FF-B42F-44B7-9B5D-2903377823E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF2F01FF-B42F-44B7-9B5D-2903377823E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF2F01FF-B42F-44B7-9B5D-2903377823E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A4AA2B-C46F-48A7-B5A5-8E40150EAD76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A4AA2B-C46F-48A7-B5A5-8E40150EAD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A4AA2B-C46F-48A7-B5A5-8E40150EAD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A4AA2B-C46F-48A7-B5A5-8E40150EAD76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

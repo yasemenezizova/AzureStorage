@@ -89,7 +89,7 @@ namespace AzureStorageLibrary.Services
             await containerClient.CreateIfNotExistsAsync();
             await containerClient.SetAccessPolicyAsync(Azure.Storage.Blobs.Models.PublicAccessType.BlobContainer);
             var blobClient = containerClient.GetBlobClient(fileName);
-            await blobClient.UploadAsync(fileStream);
+            await blobClient.UploadAsync(fileStream,true);
 
         }
     }
