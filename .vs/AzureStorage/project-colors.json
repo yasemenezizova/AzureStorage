@@ -15,7 +15,12 @@
       "ProjectGuid": "7c344562-4d0c-4c5d-9f42-4367c325d5f1",
       "DisplayName": "MvcWebApp",
       "ColorIndex": 1
+    },
+    "af2f01ff-b42f-44b7-9b5d-2903377823e7": {
+      "ProjectGuid": "af2f01ff-b42f-44b7-9b5d-2903377823e7",
+      "DisplayName": "QueueConsoleApp",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

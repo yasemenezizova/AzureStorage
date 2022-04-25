@@ -1,10 +1,14 @@
 ﻿using AzureStorageLibrary;
+using AzureStorageLibrary.Models;
+using AzureStorageLibrary.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MvcWebApp.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MvcWebApp.Controllers
@@ -14,16 +18,19 @@ namespace MvcWebApp.Controllers
         private readonly INoSqlStorage<UserPicture> _noSqlStorage;
         private readonly IBlogStorage _blobStorage;
 
+        public string UserId { get; set; } = "12345";
+        public string City { get; set; } = "Baku";
+
         public PictureController(INoSqlStorage<UserPicture> noSqlStorage, IBlogStorage blobStorage)
         {
             _noSqlStorage = noSqlStorage;
             _blobStorage = blobStorage;
         }
-        public string UserId { get; set; } = "12345";
-        public string City { get; set; } = "Baku";
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.UserId = UserId;
+            ViewBag.City= City;
             List<FileBlob> fileBlobs = new List<FileBlob>();
 
             var user = await _noSqlStorage.Get(UserId, City);
@@ -68,6 +75,16 @@ namespace MvcWebApp.Controllers
                 await _noSqlStorage.Add(isUser);
 
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult>  AddWatermark (PictureWatermarkQueue pictureWatermark)
+        {
+            var jsonString = JsonConvert.SerializeObject(pictureWatermark);
+            string jsonStringBase=Convert.ToBase64String(Encoding.UTF8.GetBytes(jsonString));
+            AzQueueStorage azQueueStorage = new AzQueueStorage("watermarkqueue");
+            await azQueueStorage.SendMessageAsync(jsonStringBase);
+            return Ok();
         }
     }
 }
